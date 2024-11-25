@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Detail</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #0562cc, #9de3ff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Image Detail</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <img src="{{ image.image.url }}" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Caption</h5>
+                        <p class="card-text">{{ image.caption }}</p>
+                        <a href="{% url 'upload_image' %}" class="btn btn-primary">Upload Another Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
