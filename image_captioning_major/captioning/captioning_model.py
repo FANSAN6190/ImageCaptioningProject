@@ -65,5 +65,5 @@ def generate_caption(image_path):
 
         if word == 'endseq':
             break
-
+    in_text = in_text.replace("startseq", ">").replace("endseq", "").strip()
     return in_text
